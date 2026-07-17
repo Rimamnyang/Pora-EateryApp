@@ -30,6 +30,9 @@ const allowedOrigins = (process.env.CLIENT_ORIGIN || "")
   .map((origin) => origin.trim())
   .filter(Boolean);
 
+console.log("CLIENT_ORIGIN:", process.env.CLIENT_ORIGIN);
+console.log("allowedOrigins:", allowedOrigins);
+
 app.use(
   cors({
     origin: function (origin, callback) {
